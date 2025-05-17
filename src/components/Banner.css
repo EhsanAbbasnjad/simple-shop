@@ -1,0 +1,44 @@
+/* src/components/Banner.css */
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  min-height: 400px; /* اطمینان از اینکه ارتفاع کافی داشته باشه */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner-content button {
+  background-color: white;
+  color: #87CEEB;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-content button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}

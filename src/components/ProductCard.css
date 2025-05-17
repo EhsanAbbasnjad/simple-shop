@@ -1,0 +1,71 @@
+/* استایل لیست محصولات */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.product-card {
+  width: 30%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.3s ease; /* برای افکت smooth هنگام هاور */
+}
+
+/* 👇 افکت هاور */
+.product-card:hover {
+  transform: translateY(-5px); /* کمی بالا بیاد */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* سایه قوی‌تر */
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* استایل برای موبایل */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+}
+
+.product-card button {
+  background-color: #87CEEB;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card button:hover {
+  background-color: #6cb6d9;
+  transform: scale(1.05);
+}

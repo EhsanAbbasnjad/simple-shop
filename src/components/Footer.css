@@ -1,0 +1,52 @@
+/* src/components/Footer.css */
+.footer {
+  background-color: #2a85ae;
+  padding: 2rem;
+  font-size: 1rem;
+  text-align: center; /* وسط‌چین کردن متن‌ها */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center; /* وسط‌چین کردن محتوا */
+  gap: 2rem;
+  direction: rtl; /* راست‌چین کردن چیدمان */
+}
+
+.footer-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-category li {
+  margin: 0.5rem 0;
+}
+
+.footer-category a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-info {
+  flex: 1;
+  text-align: center; /* وسط‌چین کردن اطلاعات */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center; /* وسط‌چین کردن محتوا */
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  direction: rtl; /* راست‌چین کردن چیدمان */
+}
+
+.footer-social a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-social a:hover {
+  color: #0077b5; /* رنگ آبی لینک‌ها */
+}

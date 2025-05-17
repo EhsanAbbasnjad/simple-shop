@@ -1,0 +1,118 @@
+/* src/pages/ProductDetails.css */
+
+.product-details-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  position: relative;
+  top: 20px;
+}
+
+.gallery-wrapper {
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.product-info h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.description-box {
+  background: linear-gradient(135deg, #f8fafc, #e0f0ff);
+  border: 1.5px solid #a3c7ff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 
+    0 6px 15px rgba(0, 123, 255, 0.12),
+    inset 0 0 10px rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  line-height: 2.2;
+  font-size: 18px;
+  text-align: right;
+  font-family: 'Vazir', Tahoma, sans-serif;
+  color: #0b3d91;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.description-box:hover {
+  box-shadow: 
+    0 10px 20px rgba(0, 123, 255, 0.25),
+    inset 0 0 15px rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+}
+
+.rating-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  color: #0b3d91;
+  font-weight: 600;
+  margin-bottom: 10px;
+ margin-right: auto; /* به چپ بچسبه */
+}
+
+.rating-wrapper svg {
+  width: 28px !important;
+  height: 28px !important;
+  color: #ffd700;
+}
+
+.rating-value {
+  font-size: 18px;
+  color: #444;
+}
+
+.no-rating-text {
+  font-size: 18px;
+  font-style: italic;
+  color: #888;
+}
+
+.product-info button {
+  background-color: #87ceeb;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  align-self: stretch;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+  background-color: #5dbcd2;
+}
+
+
+.price-rating-row {
+  display: flex;
+  flex-direction: row-reverse; /* برای راست به چپ */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

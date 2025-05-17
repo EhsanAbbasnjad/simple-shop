@@ -1,0 +1,176 @@
+/* ساختار کلی */
+.navbar {
+  background-color: #87CEEB;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Vazirmatn', sans-serif;
+  position: relative;
+  flex-wrap: wrap; /* افزودن این خط برای واکنش‌گرایی بهتر */
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-links li::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li:hover::after {
+  width: 100%;
+}
+
+.dropdown-toggle {
+  position: relative;
+  user-select: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  width: 180px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  color: #333;
+  text-align: right;
+  transition: background 0.2s;
+  white-space: nowrap;
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu li:hover {
+  background-color: #87ceeb;
+}
+
+/* برگر آیکن */
+.burger-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 24px;
+  top: 14px;
+  z-index: 2000; /* بالا نگه داشتن */
+}
+
+/* حالت موبایل */
+@media (max-width: 768px) {
+  .burger-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #87CEEB;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+    text-align: right;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+  }
+
+  .dropdown-menu li {
+    background-color: #f0f0f0;
+  }
+
+  .dropdown-menu.open {
+    display: block;
+  }
+
+  .dropdown-menu:not(.open) {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .dropdown-menu li {
+    padding: 12px 20px;
+    text-align: right;
+    background-color: #f0f0f0;
+  }
+
+  .dropdown-menu li:active,
+  .dropdown-menu li:hover {
+    background-color: #87ceeb;
+    color: white;
+  }
+}
+
+
