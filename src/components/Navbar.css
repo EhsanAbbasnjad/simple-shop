@@ -1,4 +1,3 @@
-/* ساختار کلی */
 .navbar {
   background-color: #87CEEB;
   padding: 12px 24px;
@@ -7,18 +6,51 @@
   justify-content: space-between;
   font-family: 'Vazirmatn', sans-serif;
   position: relative;
-  flex-wrap: wrap; /* افزودن این خط برای واکنش‌گرایی بهتر */
+  flex-wrap: wrap;
 }
 
-.navbar-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+/* 👇 کانتینر لوگو + خانه */
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.navbar-logo a {
-  color: white;
+/* 👇 لوگو تصویری */
+.logo-img {
+  height: 70px; /* قبلاً 40 بود */
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(-2deg);
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+  cursor: pointer;
+}
+
+
+/* 👇 آیکون خانه */
+.home-icon-wrapper {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
+
+/* 👇 افکت هاور رنگی برای آیکون خانه */
+.home-icon {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.home-icon:hover {
+  color: white;
+  background-color: #ff6ec7;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+/* 👇 سایر استایل‌های قبلی */
 
 .navbar-links {
   list-style: none;
@@ -109,7 +141,7 @@
   position: absolute;
   right: 24px;
   top: 14px;
-  z-index: 2000; /* بالا نگه داشتن */
+  z-index: 2000;
 }
 
 /* حالت موبایل */
@@ -158,7 +190,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .dropdown-menu li {
     padding: 12px 20px;
@@ -172,5 +203,3 @@
     color: white;
   }
 }
-
-

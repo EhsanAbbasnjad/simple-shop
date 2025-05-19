@@ -1,13 +1,17 @@
+body {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
 .advantages-line {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 250px;
-  padding: 20px 0;
-  background-color: #87ceeb;
+  gap: 20px;
+  padding: 20px 10px;
+  background-color: #87CEEB; /* پس‌زمینه آبی روشن */
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color: #1e2a38; /* متن‌ها تیره‌تر و خوانا */
   text-align: center;
 }
 
@@ -15,20 +19,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 250px;
+  margin: 10px;
+  color: #1e2a38;
 }
 
 .advantage-icon {
   font-size: 2rem;
   margin-bottom: 8px;
+  color: #1e2a38;
 }
 
 .advantage-title {
   font-size: 1.2rem;
   margin-bottom: 4px;
+  color: #1e2a38;
 }
 
 .advantage-description {
   font-size: 0.9rem;
   font-weight: normal;
-  color: #000000;
+  color: #1e2a38;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 600px) {
+  .advantage-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.advantages-line {
+  /* بقیه استایل‌ها */
+  border-bottom: 2px solid #1e2a38;
 }

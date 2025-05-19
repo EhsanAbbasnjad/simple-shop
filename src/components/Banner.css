@@ -1,4 +1,4 @@
-/* src/components/Banner.css */
+/* Banner.css */
 
 .banner {
   background-size: cover;
@@ -7,13 +7,19 @@
   color: white;
   padding: 60px 20px;
   text-align: center;
-  border-radius: 20px;
-  margin: 20px;
+  border-radius: 0;
+  margin: 0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  min-height: 400px; /* اطمینان از اینکه ارتفاع کافی داشته باشه */
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.banner-content {
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .banner-content h1 {
@@ -41,4 +47,37 @@
 .banner-content button:hover {
   background-color: #f0f0f0;
   transform: scale(1.05);
+}
+
+/* نسخه موبایل */
+@media (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+    padding: 30px 15px;
+    min-height: 300px;
+    text-align: left;
+    align-items: flex-start;
+    background-position: top;
+  }
+
+  .banner-content {
+    padding: 0;
+  }
+
+  .banner-content h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .banner-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .banner-content button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+  }
 }

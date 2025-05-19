@@ -1,9 +1,11 @@
+
 /* استایل لیست محصولات */
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
+  font-family: 'Vazirmatn', sans-serif;
 }
 
 .product-card {

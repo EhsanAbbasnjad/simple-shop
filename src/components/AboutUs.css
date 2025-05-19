@@ -1,6 +1,8 @@
+body{  font-family: 'IRANSans', sans-serif;
+}
 .about-container {
   padding: 2rem;
-  font-family: 'Vazir', Tahoma, sans-serif;
+  font-family: 'Vazirmatn', sans-serif;
   background-color: #f7fafd;
   color: #0b3d91;
 }

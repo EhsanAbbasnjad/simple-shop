@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
 import './Navbar.css';
 
 function Navbar() {
@@ -24,8 +25,16 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/" onClick={closeMenus}>فروشگاه من</Link>
+      {/* 👇 کانتینر لوگو و آیکون خانه */}
+      <div className="navbar-logo-container">
+        <img
+          src="/img/STA_LOGO_PNG.png"
+          alt="لوگو فروشگاه"
+          className="logo-img"
+        />
+        <Link to="/" onClick={closeMenus} className="home-icon-wrapper">
+          <AiFillHome size={24} className="home-icon" />
+        </Link>
       </div>
 
       <div className="burger-icon" onClick={toggleMobileMenu}>
@@ -43,19 +52,13 @@ function Navbar() {
           محصولات <span style={{ fontSize: '0.7rem' }}>{dropdownOpen ? '▲' : '▼'}</span>
           <ul className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
             <li>
-              <Link to="/khamir-band-keshi" onClick={closeMenus}>
-                خمیر بندکشی
-              </Link>
+              <Link to="/khamir-band-keshi" onClick={closeMenus}>خمیر بندکشی</Link>
             </li>
             <li>
-              <Link to="/rang-ayegh-acrlic" onClick={closeMenus}>
-                رنگ و عایق آکریلیک
-              </Link>
+              <Link to="/rang-ayegh-acrlic" onClick={closeMenus}>رنگ و عایق آکریلیک</Link>
             </li>
             <li>
-              <Link to="/rezin-ab-bandi" onClick={closeMenus}>
-                رزین آب‌بندی
-              </Link>
+              <Link to="/rezin-ab-bandi" onClick={closeMenus}>رزین آب‌بندی</Link>
             </li>
           </ul>
         </li>
