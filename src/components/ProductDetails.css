@@ -1,4 +1,3 @@
-
 /* src/pages/ProductDetails.css */
 
 .product-details-container {
@@ -56,6 +55,9 @@
   font-family: 'Vazir', Tahoma, sans-serif;
   color: #0b3d91;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description-box:hover {
@@ -73,7 +75,7 @@
   color: #0b3d91;
   font-weight: 600;
   margin-bottom: 10px;
- margin-right: auto; /* به چپ بچسبه */
+  margin-right: auto; /* به چپ بچسبه */
 }
 
 .rating-wrapper svg {
@@ -84,13 +86,13 @@
 
 .rating-value {
   font-size: 18px;
-  color: #444;
+  color: #1a1a1a;
 }
 
 .no-rating-text {
   font-size: 18px;
   font-style: italic;
-  color: #888;
+  color: #1a1a1a;
 }
 
 .product-info button {
@@ -103,13 +105,13 @@
   width: 100%;
   align-self: stretch;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .product-info button:hover {
   background-color: #5dbcd2;
+  transform: translateY(-2px);
 }
-
 
 .price-rating-row {
   display: flex;
@@ -117,4 +119,83 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 768px) {
+  .product-details-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    top: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gallery-wrapper {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .product-info {
+    min-width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .product-info h2 {
+    font-size: 20px;
+  }
+
+  .price-rating-row {
+    order: -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .price {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .rating-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .rating-wrapper svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .rating-value,
+  .no-rating-text {
+    font-size: 16px;
+    color: #222;
+  }
+
+  .description-box {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .product-info button {
+    padding: 10px 20px;
+    font-size: 15px;
+    width: auto;
+  }
 }

@@ -6,9 +6,9 @@ import './ProjectSlider.css';
 const ProjectSlider = () => {
   const projects = [
     {
-      image: "/rtyy.jpeg",
-      title: "پروژه فروشگاه آنلاین",
-      description: "ساخت یک فروشگاه کامل با قابلیت ثبت سفارش و پرداخت آنلاین."
+      image: "img/IMG_5836.JPG",
+      title: "پروژه کردان باغ ویلا",
+      description: "پروژه باغ ویلا کردان تمام عیایق کاری و پوشش دیوار ها و استخر با محصوات اس تی ای بوده"
     },
     {
       image: "/rtyy.jpeg",
