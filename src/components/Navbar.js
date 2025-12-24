@@ -67,8 +67,12 @@ function Navbar() {
           <Link to="/contact" onClick={closeMenus}>تماس با ما</Link>
         </li>
                <li>
-          <Link to="/contact" onClick={closeMenus}>نمونه کار</Link>
+          <Link to="/contact" onClick={closeMenus}>محصولات</Link>
         </li>
+        <li>
+        
+          <Link to="/contact" onClick={closeMenus}>باشگاه مشتریان </Link>
+          </li>
 
         <li className="dropdown-toggle" onClick={toggleDropdown}>
           محصولات <span style={{ fontSize: '0.7rem' }}>{dropdownOpen ? '▲' : '▼'}</span>
